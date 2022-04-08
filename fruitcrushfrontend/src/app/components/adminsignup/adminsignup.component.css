@@ -1,0 +1,277 @@
+h1{
+    margin: 0px;
+    color: white;
+    text-align: center;
+    padding-top:2%;
+    padding-bottom: 2%;
+    background: rgb(144, 26, 190);
+}
+h2{
+    color: rgb(144, 26, 190);
+    margin-left: 15%;
+    margin-top: 5%;
+    font-size: 2.5em;
+}
+.form-group{ margin-bottom: 5%; }
+#password,#email,#username,#mobilenumber,#confirmpassword{
+    
+    padding: 20px;
+    color:black;
+    font-size: 1em;
+    font-weight: bold;
+    width: 65%;
+    background: linear-gradient(to top right,white 40%,rgb(180, 97, 212),rgb(144, 26, 190));
+}
+.group1{
+flex: 2;
+}
+.group2{
+flex: 1;
+}
+#submitButton{
+margin-left:25%;
+width: 15%;
+padding: 1.6%;
+color: aliceblue;
+font-size: x-large;
+background:rgb(144, 26, 190) ;
+}
+.box{
+    padding-top: 3%;
+    padding-left: 10%;
+    justify-content: center;
+}
+img{
+    margin-top: -1%;
+}
+a{
+    text-decoration: none;
+}
+.adminsignupstyle{
+    padding-top: 0%;
+    margin-left:18%;
+}
+p{
+    font-size:medium;
+    font-style: italic;
+
+}
+.signupstyle{
+    padding-top: 0%;
+    margin-left:21%;
+    font-size: large;
+    font-weight: 500;
+}
+@media screen and (max-width: 2246px) {
+    .signupstyle{
+        margin-left:20.7%;
+        font-size: large;
+        font-weight: 500;
+    }
+    
+}
+@media screen and (max-width: 2006px) {
+    .signupstyle{
+        margin-left:20%;
+        font-size: large;
+        font-weight: 500;
+    }
+    
+}
+@media screen and (max-width: 1503px) {
+    .signupstyle{
+        margin-left:20%;
+        font-size: large;
+        font-weight: 500;
+    }
+    
+}
+@media screen and (max-width: 1358px) {
+    #submitButton{
+        width: 20%;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .signupstyle{
+        margin-left:19%;
+        font-size: large;
+        font-weight: 500;
+    }
+    
+}
+@media screen and (max-width: 1087px) {
+    .signupstyle{
+        margin-left:19%;
+        font-size: large;
+        font-weight: 500;
+    }
+    #submitButton{
+        margin-left:25%;
+        width: 20%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+}
+@media screen and (max-width: 1067px) {
+    #submitButton{
+        width: 22%;
+        }
+        .signupstyle{
+            margin-left:17%;
+            font-size: large;
+            font-weight: 500;
+        }
+        
+}
+@media screen and (max-width: 1067px) {
+    #submitButton{
+        width: 30%;
+        }
+        .signupstyle{
+            margin-left:17%;
+            font-size: large;
+            font-weight: 500;
+        }
+        
+}
+@media screen and (max-width: 849px) {
+    #submitButton{
+        margin-left:25%;
+        width: 30%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+}
+@media screen and (max-width: 716px) {
+    #submitButton{
+        margin-left:25%;
+        width: 30%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+}
+@media screen and (max-width: 653px) {
+    #submitButton{
+        width: 34%;
+        }
+}
+@media screen and (max-width: 619px) {
+    #submitButton{
+        width: 40%;
+        }
+}
+@media screen and (max-width: 626px) {
+    #submitButton{
+        margin-left:25%;
+        width: 40%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+}
+@media screen and (max-width: 601px) {
+    img{
+        margin-top: -5%;
+    }
+}
+@media screen and (max-width: 575px) {
+    #submitButton{
+        margin-left:25%;
+        width: 40%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+}
+@media screen and (max-width: 534px) {
+    img{
+        margin-top: -3%;
+    }
+    .signupstyle{
+        margin-left:14%;
+    }
+    
+}
+@media screen and (max-width: 511px) {
+    #submitButton{
+        margin-left:25%;
+        width: 43%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+        img{
+            margin-top: -3%;
+            width: 80%;
+        }
+        .signupstyle{
+            margin-left:14%;
+        }
+        
+}
+@media screen and (max-width: 451px) {
+    img{
+        margin-top: -3%;
+        width: 88%;
+    }
+    .signupstyle{
+        margin-left:14%;
+    }
+    
+}
+@media screen and (max-width: 441px) {
+    #submitButton{
+        margin-left:25%;
+        width: 50%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+        .signupstyle{
+            margin-left:14%;
+        }
+        
+}
+@media screen and (max-width: 399px) {
+    #submitButton{
+        margin-left:25%;
+        width: 55%;
+        padding: 2%;
+        color: aliceblue;
+        font-size: x-large;
+        background:rgb(144, 26, 190) ;
+        }
+        .signupstyle{
+            margin-left:14%;
+        }
+        
+}
+@media screen and (max-width: 381px) {
+    img{
+        margin-top: 1%;
+        width: 91%;
+    }
+        .signupstyle{
+        margin-left:14%;
+    }
+    
+}
+@media screen and (max-width: 335px) {
+    #submitButton{
+        width: 58%;
+        }
+        .signupstyle{
+            margin-left:14%;
+        }
+        
+}

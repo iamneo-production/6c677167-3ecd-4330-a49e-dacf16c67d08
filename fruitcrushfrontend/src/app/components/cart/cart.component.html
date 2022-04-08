@@ -1,0 +1,27 @@
+<div class="back">
+    <div class="headcomp">
+        <ul class="title">
+            <li class="brand"><a href="/home">Fruits Crush</a></li>
+                <li class="pages" id="productHomeButton"><a href="/home">Home</a></li>
+                <li class="pages selected" id="productCartButton"><a href="/cart">Cart</a></li>
+                <li class="pages" id="productOrderButton"><a href="/orders">My orders</a></li>
+                <li class="logout" id="logout"><button (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+    <div>
+        <table id="productCartBody">
+            <tr>
+                <th>ProductName</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+              <tr *ngFor="let cartlist of cartlists">
+                <td>{{cartlist.productName}}</td>
+                <td>$ {{cartlist.price}}</td>
+                <td>{{cartlist.quantity}} kg</td>
+              </tr>
+        </table>
+    </div>
+    <br><br>
+    <button class="placeOrder" id="placeOrderButton" (click)="placeOrder()">Place order</button>
+    </div>

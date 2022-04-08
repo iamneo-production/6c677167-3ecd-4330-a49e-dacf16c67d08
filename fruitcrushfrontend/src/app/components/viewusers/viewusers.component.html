@@ -1,0 +1,33 @@
+<div class="back">
+    <div class="headcomp">
+        <ul class="title">
+            <li class="brand"><a href="/home">Fruits Crush</a></li>
+            <li class="pages selected" id="productHomeButton"><a href="addProduct">Products</a></li>
+                <li class="pages" id="productCartButton"><a href="admin/orders">Orders</a></li>
+                <li class="pages selected" id="productOrderButton"><a href="admin/users">Users</a></li>
+                <li class="logout" id="logout"><button (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+    <div>
+        <table id="productCartBody" class = "tablespecial">
+            <tr>
+                <th>Username</th>
+                <th>Email Id</th>
+                <th>Mobile number</th>
+                <th>Role</th>
+                <th>Active state</th>
+              </tr>
+              <tr *ngFor="let userlist of userlists">
+                <td class="special">{{userlist.emailId}}</td>
+                <td>{{userlist.userName}}</td>
+                <td>{{userlist.mobileNo}}</td>
+                <td>{{userlist.role}}</td>
+                <td *ngIf="userlist.active==true">Active</td>
+                <td *ngIf="userlist.active==false">InActive</td>
+                <a [routerLink]="['/editUser/',userlist.id]" routerLinkActive="active"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-edit-interface-kiranshastry-gradient-kiranshastry.png"/></a>
+                <button class="delete" (click)="deleteElement(userlist.emailId)"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-delete-miscellaneous-kiranshastry-gradient-kiranshastry.png"/></button>
+              </tr>
+        </table>
+    </div>
+    <br><br>
+    </div>

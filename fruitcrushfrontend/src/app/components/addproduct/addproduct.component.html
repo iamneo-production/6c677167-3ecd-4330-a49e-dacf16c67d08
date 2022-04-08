@@ -1,0 +1,55 @@
+<div class="back">
+    <div class="headcomp">
+        <ul class="title">
+            <li class="brand"><a href="/home">Fruits Crush</a></li>
+                <li class="pages selected" id="productHomeButton"><a href="addProduct">Products</a></li>
+                <li class="pages" id="productCartButton"><a href="admin/orders">Orders</a></li>
+                <li class="pages" id="productOrderButton"><a href="admin/users">Users</a></li>
+                <li class="logout" id="logout"><button (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+    <div style="display: flex;flex-wrap: wrap;">
+    <div style="flex: 40%;">
+        <table id="productCartBody" class = "tablespecial">
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+              <tr *ngFor="let productlist of produclists">
+                <td class="special"><img src="\assets\images\{{productlist.imageUrl}}"alt="apple" width="100px" height="100px"></td>
+                <td>{{productlist.productName}}</td>
+                <td>$ {{productlist.price}}</td>
+                <td>{{productlist.quantity}} kg</td>
+                <a [routerLink]="['/editProduct/',productlist.id]" routerLinkActive="active"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-edit-interface-kiranshastry-gradient-kiranshastry.png" width="40px"/></a>
+                <button class="delete" (click)="deleteElement(productlist.id)"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-delete-miscellaneous-kiranshastry-gradient-kiranshastry.png" width="40px"/></button>
+              </tr>
+        </table>
+    </div>
+    <div class="addgift" style="margin-left: auto;flex: 10%;">
+        <br/> <br/> <br/>
+    <div class="titlebar"> 
+            Add Product
+        </div>
+        <div class="form">
+            <br>
+            <br>
+                <input placeholder = "Enter the Product Name" type = "text" id = "enterProductName" [(ngModel)]="product.productName">
+                <br>
+                <input placeholder = "Enter the Product Price" type = "number" id =  "enterProductPrice" [(ngModel)]="product.price">
+                <br>
+                <input placeholder = "Enter the Product Image URL" type = "text" id =  "enterProductImageUrl" [(ngModel)]="product.imageUrl">
+                <br>
+                <input placeholder = "Enter the Product Quantity" type = "number" id =  "enterProductQuantity" [(ngModel)]="product.quantity">
+                <br>
+            <div class="center">
+            <button  id = "submitButton" type='submit' value="Submit" (click)="addProduct()"> ADD </button>
+            <br>
+            </div>
+            <br>
+        </div>
+        <br/>
+    </div>
+</div>
+    </div>

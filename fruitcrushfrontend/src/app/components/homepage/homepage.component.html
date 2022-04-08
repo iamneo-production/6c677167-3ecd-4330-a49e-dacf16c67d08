@@ -1,0 +1,28 @@
+<div class="headcomp">
+    <ul class="title">
+        <li class="brand"><a href="/home">Fruits Crush</a></li>
+            <li class="pages selected" id="productHomeButton"><a href="/home">Home</a></li>
+            <li class="pages" id="productCartButton"><a href="/cart">Cart</a></li>
+            <li class="pages" id="productOrderButton"><a href="/orders">My orders</a></li>
+        <li class="logout" id="logout"><button (click)="logout()">Logout</button></li>
+    </ul>
+</div>
+<div class="items">
+<div class="productlist" *ngFor="let productlist of products">
+    <div class="product">
+        <img src="\assets\images\{{productlist.imageUrl}}"alt="apple">
+        <div class="price">
+            <p style="margin-left: 5%;">{{productlist.productName}}</p>
+            <p style="margin-left: auto;margin-right: 5%;">${{productlist.price}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="centeriteam">
+    <div class="Quantity">
+        <input class="quantity-box" type ="text" placeholder="Quantity" #quantity>
+    </div>
+    <br>
+    <button class="button" (click)="addCart(productlist.productName,productlist.price,quantity.value)">Add to Cart</button>
+</div>
+</div>
+</div>

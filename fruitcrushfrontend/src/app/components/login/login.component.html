@@ -1,0 +1,40 @@
+<h1>Login</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div id="loginBox">
+  <div>
+  <div style="display: flex;flex-wrap: wrap;" class="box">
+  <div class="group1">
+<input type="email" id="email" placeholder="Enter email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" [(ngModel)]="user.emailId">
+<div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+  <div *ngIf="f['email'].errors['required']">Email is required</div>
+  <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+</div>
+<br>
+<input type="password" id="password" placeholder="Enter Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" [(ngModel)]="user.password">
+<div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+  <div *ngIf="f['password'].errors['pattern']">password does not match the requirement</div>
+  <div *ngIf="f['password'].errors['required']">Password is required</div>
+  <div *ngIf="f['password'].errors['minlength']">
+    Password must be at least 6 characters
+  </div>
+  <div *ngIf="f['password'].errors['maxlength']">
+    Username must not exceed 40 characters
+  </div>
+</div>
+<br>
+<button type="submit" id="submitButton">Login</button>
+</div>
+<div class="group1">
+  <img src="assets/images/loginimage.jpeg" alt="Laptop" width="70%"/>
+</div>
+</div>
+<br>
+<div class="signupstyle">
+  <p>New User? <a href="/signup">Sign Up</a></p>
+</div>
+<div class="adminsignupstyle">
+  <p>Admin Login? <a href="/admin/login">Admin Login</a></p>
+  </div>
+</div>
+</div>
+</form>

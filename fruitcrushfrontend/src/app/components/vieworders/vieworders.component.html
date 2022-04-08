@@ -1,0 +1,30 @@
+<div class="back">
+    <div class="headcomp">
+        <ul class="title">
+            <li class="brand"><a href="/home">Fruits Crush</a></li>
+            <li class="pages selected" id="productHomeButton"><a href="addProduct">Products</a></li>
+                <li class="pages selected" id="productCartButton"><a href="admin/orders">Orders</a></li>
+                <li class="pages" id="productOrderButton"><a href="admin/users">Users</a></li>
+                <li class="logout" id="logout"><button (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+    <div>
+        <table id="productCartBody" class = "tablespecial">
+            <tr>
+                <th>Order Id</th>
+                <th>User Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+              <tr *ngFor="let orderlist of orderlists">
+                <td class="special">{{orderlist.id}}</td>
+                <td>{{orderlist.username}}</td>
+                <td>{{orderlist.productName}}</td>
+                <td>$ {{orderlist.price}}</td>
+                <td>{{orderlist.quantity}} kg</td>
+              </tr>
+        </table>
+    </div>
+    <br><br>
+    </div>

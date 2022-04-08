@@ -1,0 +1,27 @@
+    <div id = "editGiftBody">
+    <br><br><br>
+    <br><br><br>
+    
+     <div  class="form" >
+         <br>
+         <br>
+     <div class="titlebar"> 
+            Edit Product
+        </div>
+    <div>
+            <br>
+                <input placeholder = "Enter the Product Name" type = "text" id = "EditGiftName" [(ngModel)]="product.productName">
+                <br>
+                <input placeholder = "Enter the Product Price" type = "number" id =  "EditGiftPrice" [(ngModel)]="product.price">
+                <br>
+                <input placeholder = "Enter the Product Image URL" type = "text" id =  "EditGiftImageUrl" [(ngModel)]="product.imageUrl">
+                <br>
+                <input placeholder = "Enter the Product Quantity" type = "number" id =  "EditGiftQuantity"  [(ngModel)]="product.quantity">
+                <br>
+        </div>
+            <div class="center">
+            <button  id = "updateGiftButton" type='submit' value="Submit" (click)="updateProduct()"> UPDATE </button>
+            <br>
+            <br><br>
+            </div> </div>
+    </div>
